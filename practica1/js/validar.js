@@ -104,7 +104,7 @@ $(document).ready(function(){
     	}
     	
     }
-    var sh=285;
+    var sh=125;
     $( window ).scroll(function() {
     	var scroll = $(window).scrollTop();
     	console.log(scroll.valueOf());
@@ -117,17 +117,17 @@ $(document).ready(function(){
 	
 
 	});
-    var htm="<div><h4 class='section-heading'>aqui se le solicita informacion personal</h4></div><div class=''><div class='pa'><p class='hi'><label  class='nom'>Nombre:"+$("#id_nombre").val()+" </label></p><p class='hi'><label  class='ape'>Apellido: "+$("#id_apellido").val() +"</label></p><p class='hi'><label  class='ci'>Cedula: "+$("#id_cedula").val()+"</label></p><p class='pa'><label for='id_carrera'>Carrera:"+$("#id_carrera").val() +"</label></p></div></div><div><div><h4 class='section-heading'>informacion de la materia</h4></div><div class='pa'><p class='hi'><label  class='asi'>Asignatura: "+$("#id_asignatura").val() +"</label></p><p class='hi'><label  class='asi'>Codigo: "+$("#id_codigo").val() +"</label></p><p class='hi'><label  class='asi'>Unidad de Credito: "+$("#id_unicredito").val() +"</label></p></div></div>"
+    var htm="<div><h4 class='section-heading'>Aqui se le solicita informacion personal</h4></div><div class=''><div class='pa'><p class='hi'><label  class='nom'>Nombre: "+$("#id_nombre").val()+" </label></p><p class='hi'><label  class='ape'>Apellido: "+$("#id_apellido").val() +"</label></p><p class='hi'><label  class='ci'>Cedula: "+$("#c").val()+$("#id_cedula").val()+"</label></p><p class='pa'><label for='id_carrera'>Carrera: "+$("#id_carrera").val() +"</label></p></div></div><div><div><h4 class='section-heading'>informacion de la materia</h4></div><div class='pa'><p class='hi'><label  class='asi'>Asignatura: "+$("#id_asignatura").val() +"</label></p><p class='hi'><label  class='asi'>Codigo: "+$("#id_codigo").val() +"</label></p><p class='hi'><label  class='asi'>Unidad de Credito: "+$("#id_unicredito").val() +"</label></p><p class='hi'><label  class='ape'>Motivo: "+$("#id_motivo").val() +"</label></p></div></div>"
 	$("#p").click(function() {
        
         $.ajax({
             type: 'post',
             url: 'form.php',
             data: $('form').serialize(),
-            success: function () {
-                if(data=="true"){
+            success: function (result) {
+                if(result=="true"){
                   $("section").html(htm)
-                    sh=151;
+                    sh=0;
                 }else{
                     alert("faild")
                  }

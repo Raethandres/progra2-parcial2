@@ -5,8 +5,10 @@ body {
   left: 0px;
   right: 0px;
   margin: 0px 0px 0px 0px;
-  background: url('../img/header.jpg');
+  background-image: url('../img/header.jpg');
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
@@ -77,6 +79,9 @@ header .header-content .header-content-inner h1 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 30px;
+  display: inline-block;
+  background-color: #363636;
+  opacity: 0.8;
 }
 header .header-content .header-content-inner hr {
   margin: 30px auto;
@@ -146,4 +151,10 @@ header .header-content .header-content-inner p {
   display: inline-block;
   background-color: #363636;
   opacity: 0.8;
+}
+section:hover{
+  opacity: 0.9;
+}
+section:hover p{
+  color: #363636;
 }
