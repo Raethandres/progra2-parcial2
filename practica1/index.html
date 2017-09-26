@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sistemas de retiro de asignaturas</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="header-content">
+            <div class="header-content-inner">
+               <h2>
+				AQUI DEBERA DAR INFORMACION <br>PARA CULMINAR CON EL RETIRO DE MATERIA
+				</h2>
+            </div>
+        </div>
+	</header>
+	<section class="bg-primary center">
+		<div>
+			<form action="form.php" method="post" class="">
+				<div>
+					<h4 class="section-heading">
+						aqui se le solicita informacion personal
+					</h4>
+				</div>
+				<!-- <form method="POST" class=""> -->
+					<div class="">
+						<div class="pa">
+							<p class="hi"><label id="err" class="nom">ERROR SIN NUMEROS:</label><input  type="text" name="nombre" id="id_nombre" required maxlength="20" placeholder="NOMBRE" class="inline"/></p>
+
+							<p class="hi"><label id="err" class="ape">ERROR SIN NUMEROS:</label><input  type="text" name="apellido" id="id_apellido" required maxlength="20"  placeholder="APELLIDO"  class="inline"/></p>
+						</div>
+						
+						<div class="pa">
+							<p class="hi">
+							<select name="c" id="c">
+						 		<option value="1" selected>V</option>
+
+						  		<option value="2">E</option>
+
+						  		<option value="3">P</option>
+
+							</select></p>
+
+							<p class="hi"><label id="err" class="ci">ERROR SIN LETRAS:</label><input type="number" name="cedula" id="id_cedula" required  placeholder="Cedula"/></p>
+						</div>
+						
+
+						<p class="pa"><label for="id_carrera">Carrera:</label> <select name="carrera" id="id_carrera">
+						  <option value="1" selected>Ingenieria Informatica</option>
+
+						  <option value="2">Ingenieria Electronica</option>
+
+						  <option value="3">Ingenieria Industrial</option>
+
+						  <option value="4">Ingenieria Civil</option>
+
+						  <option value="5">Ingenieria Mecanica</option>
+
+						  <option value="6">Ingenieria Ambiental</option>
+
+						</select></p>
+
+					</div>
+											
+			<div>
+				<div>
+					<h4 class="section-heading">
+						aqui se le solicita informacion de la materia
+					</h4>
+				</div>
+				<!-- <form method="POST" class=""> -->
+					<div class="pa">
+				
+						<p class="hi"><label id="err" class="asi">ERROR SIN NUMEROS:</label><input type="text" name="asignatura" required maxlength="20" id="id_asignatura"  placeholder="Asignatura" /></p>
+
+						<p class="hi"><label id="err" class="cod">ERROR SIN LETRAS:</label><input type="number" name="codigo" required id="id_codigo"  placeholder="Codigo"/></p>
+
+						<p class="hi"><label id="err" class="uni">ERROR SIN LETRAS:</label><input type="number" name="unicredito" required id="id_unicredito"  placeholder="Unidades de Credito"/></p>
+
+						<p><input type="text" name="motivo" required id="id_motivo"  placeholder="Motivo"/></p>
+					</div>
+				<!-- </form> -->
+				
+			</div>
+				<p id="p" class="pa" ><a class="btn">Procesar retiro</a></p>
+			</form>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/validar.js"></script>
+</body>
+</html>
